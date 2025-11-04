@@ -1,0 +1,221 @@
+<html>
+    <head>
+  
+        <title>UTS PBW FIRNA</title>
+        <script>
+            alert("Halo, selamat datang di webste saya!^^");
+            var pin = prompt("Masukan Nama Anda");
+            if (pin === "sangwon") {
+                alert("Selamat datang, Sangwon!");
+            } else {
+                alert("Selamat datang, " + pin + "!");
+            }
+
+        </script>
+    </head>
+<head>
+
+  <title>Website Saya</title>
+  <style>
+ 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'sans-serif', Arial, Helvetica;
+      background: #726fcf;
+      color: #3a3a3a;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #0764cd;
+      color: white;
+      width: 100%;
+      padding: 40px 0 30px 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-weight: 900;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      user-select: none;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav button {
+      background: black;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 25px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    nav button:hover {
+      background: #1f71dfcc;
+    }
+
+    main {
+      background: #f2f3f5;
+      border-radius: 15px;
+      width: 80%;
+      max-width: 900px;
+      margin-top: -40px;
+      padding: 40px 35px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    main h2 {
+      color: #283955;
+      font-weight: 800;
+      font-size: 2rem;
+      margin-bottom: 6px;
+      user-select: none;
+      text-align: center;
+    }
+
+    main h2.underline {
+      border-bottom: 3px solid #0f66e8;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .welcome-box {
+      margin: 20px auto 30px auto;
+      background: white;
+      display: inline-block;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 15px 25px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #0f66e8;
+      user-select: none;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      user-select: text;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 25px;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        display: none;
+    }
+
+    th {
+        background: linear-gradient(90deg, #0061ff, #0075ff);
+        color: white;
+        font-weight: 600;
+        padding: 14px;
+    }
+
+    td {
+        padding: 14px;
+        font-weight: 500;
+    }
+
+    tr:nth-child(even) {
+        background: #f9f9f9;
+    }
+    
+    tr:nth-child(odd) {
+        background: #ffffff;
+    }
+
+    tr::highlight {
+        background: #e8f4ff;
+    }
+
+    footer {
+        margin-top: 25px;
+        font-size: 14px;
+        color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Website Firna</h1>
+    <nav>
+      <button id="homeBtn">Home</button>
+      <button id="aboutBtn">About</button>
+      <button id="eduBtn">Riwayat Pendidikan</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="underline">Home</h2>
+    <div class="welcome-box" id="welcomeMessage">Selamat datang, Sangwon!</div>
+    <p>Selamat Datang di Website saya!^^</p>
+    <p>
+      Alpha Drive One adalah boy group global jebolan survival show Boys II Planet di bawah naungan WakeOne Entertainment. Beranggotakan delapan trainee berbakat dari berbagai negara, Alpha Drive One hadir dengan semangat dan konsep energik yang menggambarkan tekad untuk “melaju menuju puncak.” 
+      Grup ini dipimpin oleh Leo dan memiliki fandom bernama ALLYZ, simbol ikatan kuat antara grup dan penggemar. Mereka dijadwalkan debut resmi pada awal tahun 2026.
+    </p>
+  </main>
+
+  <script>
+    const homeBtn = document.getElementById('homeBtn');
+    const aboutBtn = document.getElementById('aboutBtn');
+    const eduBtn = document.getElementById('eduBtn');
+    const mainTitle = document.querySelector('main h2');
+    const welcomeBox = document.getElementById('welcomeMessage');
+    const paragraphs = document.querySelectorAll('main p');
+
+    homeBtn.addEventListener('click', () => {
+      mainTitle.textContent = 'Home';
+      mainTitle.classList.add('underline');
+      welcomeBox.style.display = 'inline-block';
+      welcomeBox.textContent = 'Selamat datang, Sangwon!';
+      paragraphs[0].textContent = 'Selamat Datang di website saya';
+      paragraphs[1].textContent = 'Alpha Drive One adalah boy group global jebolan survival show Boys II Planet di bawah naungan WakeOne Entertainment. Beranggotakan delapan trainee berbakat dari berbagai negara, Alpha Drive One hadir dengan semangat dan konsep energik yang menggambarkan tekad untuk “melaju menuju puncak.”Grup ini dipimpin oleh Leo dan memiliki fandom bernama ALLYZ, simbol ikatan kuat antara grup dan penggemar. Mereka dijadwalkan debut resmi pada awal tahun 2026.';
+    });
+
+    aboutBtn.addEventListener('click', () => {
+      mainTitle.textContent = 'About';
+      mainTitle.classList.remove('underline');
+      welcomeBox.style.display = 'none';
+      paragraphs[0].textContent = 'Alpha Drive One (disingkat ALD1) adalah boy group global baru yang lahir dari ajang survival ternama Boys II Planet, di bawah manajemen WakeOne Entertainment — agensi yang juga menaungi grup populer seperti ZEROBASEONE. Grup ini terdiri dari delapan anggota multinasional: Junseo, Arno, Leo, Geonwoo, Sangwon, Xinlong, Anxin, dan Sanghyeon, yang masing-masing membawa warna, kemampuan, dan kepribadian unik ke dalam tim.';
+      paragraphs[1].textContent = 'Nama “Alpha Drive One” memiliki makna mendalam, menggambarkan semangat tim untuk terus bergerak maju sebagai satu kesatuan yang memimpin. Dengan konsep penuh energi, kekuatan, dan semangat kompetitif, ALD1 bertekad menghadirkan performa yang dinamis dan memukau di atas panggung. Fandom resmi mereka, ALLYZ, melambangkan hubungan erat dan saling mendukung antara grup dan para penggemar di seluruh dunia.';
+
+    });
+
+    eduBtn.addEventListener('click', () => {
+      mainTitle.textContent = 'Riwayat Pendidikan';
+      mainTitle.classList.remove('underline');
+      welcomeBox.style.display = 'none';
+
+});
+
+  </script>
+
+</body>
+</html>
